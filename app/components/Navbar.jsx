@@ -46,7 +46,7 @@ const Navbar = () => {
             <Text style={styles.menuText}>Contacto</Text>
           </TouchableOpacity>
           {!user ? (
-            <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/login')}>
+            <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/components/user/Login')}>
               <Text style={styles.menuText}>Iniciar sesión</Text>
             </TouchableOpacity>
           ) : (

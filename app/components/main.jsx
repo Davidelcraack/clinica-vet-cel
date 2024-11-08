@@ -9,11 +9,11 @@ export default function Main() {
   const router = useRouter();
 
   const handleClick = () => {
-    /*if (user) {
-     r user.name ? router.push('/dashboard') : router.push('/crear-usuario');
+    if (user) {
+      user.name ? router.push('/components/appointment/Dashboard') : router.push('/components/appointment/CrearUsuario');
     } else {
-      router.push('/login');
-    }*/
+      router.push('/components/user/Login');
+    }
    return false;
   };
 
@@ -32,11 +32,6 @@ export default function Main() {
         <TouchableOpacity onPress={handleClick} style={styles.button}>
           <Text style={styles.buttonText}>AGENDAR UNA CITA</Text>
         </TouchableOpacity>
-        {user && user.role === 'admin' && (
-          <TouchableOpacity onPress={handleAdmin} style={styles.button}>
-            <Text style={styles.buttonText}>PANEL DE ADMINISTRACIÓN</Text>
-          </TouchableOpacity>
-        )}
       </View>
     </ImageBackground>
     </>
